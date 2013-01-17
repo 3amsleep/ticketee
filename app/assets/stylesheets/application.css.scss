@@ -197,3 +197,9 @@ ul#tickets .state {
 #ticket #watchers {
   font-size: 85%;
 }
+
+.field_with_errors {
+  padding: 2px;
+  background-color: #FFA3AA;
+  display: table;
+}

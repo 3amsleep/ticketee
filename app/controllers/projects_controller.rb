@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
   def index
+    @projects = Project.all
   end
 
   def new
@@ -8,12 +9,12 @@ class ProjectsController < ApplicationController
 
   def create
     @project = Project.new(params[:project])
-    p params
     if @project.save
       redirect_to @project,
         :notice => "Project has been created."
     else
-      #nyet
+      flash[:alert] = "Project has not been created."
+      render :new
     end
   end
 
