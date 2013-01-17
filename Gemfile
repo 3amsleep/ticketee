@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.11'
+gem 'rails', '~> 3.2.11'
 gem 'dynamic_form', '>= 1.1.4'
 
 # Bundle edge Rails instead:
