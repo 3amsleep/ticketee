@@ -32,6 +32,9 @@ group :test do
   gem 'capybara', '~> 2.0'
   gem 'factory_girl_rails', '~> 4.0'
 end
+
+gem 'devise', '~> 2.1'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
