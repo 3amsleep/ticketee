@@ -1,6 +1,12 @@
 require "spec_helper"
 
 feature "Signing in" do
+  # check if Sign in / Sign up links aren't there
+  def no_signign
+    page.should_not have_content "Sign in"
+    page.should_not have_content "Sign up"
+  end
+
   before do
     FactoryGirl.create(:user, :email => "ticketee@example.com")
   end
@@ -10,6 +16,7 @@ feature "Signing in" do
     click_first_link_in_email
     page.should have_content "Your account was successfully confirmed"
     page.should have_content "Signed in as ticketee@example.com"
+    no_signign
   end
 
   scenario "Signing in via form" do
@@ -20,5 +27,6 @@ feature "Signing in" do
     fill_in "Password", :with => "password"
     click_button "Sign in"
     page.should have_content "Signed in successfully"
+    no_signign
   end
 end

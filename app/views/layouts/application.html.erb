@@ -28,9 +28,9 @@
             concat "Signed in as #{current_user.email}"
         else
             concat link_to "Sign up", new_user_registration_path
+            concat link_to "Sign in", new_user_session_path
         end
     %>
-    <%= link_to "Sign in", new_user_session_path %>
 </nav>
 
 <%= yield %>
