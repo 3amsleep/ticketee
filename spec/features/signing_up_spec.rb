@@ -8,6 +8,6 @@ feature "Signing up" do
     fill_in "user_password", :with => "password"
     fill_in "user_password_confirmation", :with => "password"
     click_button "Sign up"
-    page.should have_content "You have signed up successfully"
+    page.should have_content "Please open the link to activate your account"
   end
 end
