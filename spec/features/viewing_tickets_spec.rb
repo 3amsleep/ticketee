@@ -2,7 +2,7 @@ require 'spec_helper'
 
 feature "Viewing tickets" do
   before do
-    user = FactoryGirl.create :user
+    user = FactoryGirl.create :confirmed_user
     textmate_2 = FactoryGirl.build(:project, :name => "TextMate 2")
     FactoryGirl.create(:ticket,
                       :project => textmate_2,
@@ -17,6 +17,9 @@ feature "Viewing tickets" do
                       :description => "Isn't a joke.",
                       :user => user)
 
+    define_permission!(user, :view, textmate_2)
+    define_permission!(user, :view, internet_explorer)
+    sign_in_as!(user)
     visit '/'
   end
 
