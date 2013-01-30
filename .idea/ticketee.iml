@@ -28,6 +28,7 @@
     <orderEntry type="library" scope="PROVIDED" name="bcrypt-ruby (v3.0.1, ruby-1.9.3-p125) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="builder (v3.0.4, ruby-1.9.3-p125) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bundler (v1.0.22, ruby-1.9.3-p125) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="cancan (v1.6.8, ruby-1.9.3-p125) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="capybara (v2.0.2, ruby-1.9.3-p125) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="childprocess (v0.3.6, ruby-1.9.3-p125) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coffee-rails (v3.2.2, ruby-1.9.3-p125) [gem]" level="application" />
