@@ -4,6 +4,7 @@ class TicketsController < ApplicationController
   before_filter :find_ticket, :only => [:show, :edit, :update, :destroy]
   before_filter :authorize_create!, :only => [:new, :create]
   before_filter :authorize_update!, :only => [:edit, :update]
+  before_filter :authorize_delete!, :only => :destroy
 
   def new
     @ticket = @project.tickets.build
@@ -71,4 +72,12 @@ class TicketsController < ApplicationController
                     :alert => "You cannot edit tickets on this project"
       end
     end
+
+    def authorize_delete!
+      if cannot? :delete_tickets, @project
+        redirect_to @project,
+                    :alert => "You cannot delete tickets on this project"
+      end
+    end
 end
+
